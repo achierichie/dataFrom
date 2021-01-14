@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">dataForm</string>
+    <string name="name">name</string>
+    <string name="farm_assesment_form">Farm Assesment Form</string>
+    <string name="enumerator">Enumerator</string>
+    <string name="farmer_name">Farmer Name</string>
+    <string name="farm_location">Farm Location</string>
+    <string name="farm_size_matured">Farm Size(Matured)</string>
+    <string name="age_of_farm">Age Of Farm</string>
+    <string name="crop_varieties">Crop Varieties</string>
+    <string name="tetteh_quashi">Tetteh Quarshie</string>
+    <string name="hybrid">Hybrid</string>
+    <string name="yield_per_season">Yield Per Season</string>
+    <string name="other_crops_oilpalm">Other Crops(e.g Oil Palm)</string>
+    <string name="road_condition">Road Condition</string>
+</resources>
