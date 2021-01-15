@@ -172,9 +172,10 @@
         android:textColorHint="@color/grey"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout11"
-        tools:layout_editor_absoluteX="30dp"></TextView>
+        tools:layout_editor_absoluteX="30dp" />
 
     <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/hybrid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -200,7 +201,7 @@
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        tools:ignore="MissingConstraints"></androidx.appcompat.widget.AppCompatCheckBox>
+        tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout14"
@@ -246,6 +247,49 @@
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout15"
+        app:layout_constraintVertical_bias="0.0"
+        >
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/roadCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="@string/road_condition"
+            android:textColorHint="@color/grey"
+            android:prompt="@string/road_condition"
+            android:entries="@array/road_conditions"
+            android:drawSelectorOnTop="true"
+            android:spinnerMode="dialog"
+            android:layout_margin="4dp"
+            android:paddingHorizontal="20dp"
+            android:padding="10dp"
+
+            />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:layout_margin="14dp"
+
+            />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,4 +13,17 @@
     <string name="yield_per_season">Yield Per Season</string>
     <string name="other_crops_oilpalm">Other Crops(e.g Oil Palm)</string>
     <string name="road_condition">Road Condition</string>
+    <string name="save">Save</string>
+    <string name="form_error">There were errors in the input provided</string>
+    <string name="save_successful">Data saved successfully</string>
+
+
+    <string-array name="road_conditions">
+        <item>Bad</item>
+        <item>Badder</item>
+        <item>Baddest</item>
+        <item>Good</item>
+        <item>Gooder</item>
+        <item>Goodest</item>
+    </string-array>
 </resources>
