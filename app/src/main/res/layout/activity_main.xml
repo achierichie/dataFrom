@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity"
     tools:ignore="ExtraText">
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
@@ -32,7 +34,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
-        android:hint="@string/name"
+        android:hint="@string/date"
         android:textColorHint="@color/grey"
         app:boxStrokeColor="#EBD8D8D8"
         app:layout_constraintEnd_toEndOf="parent"
@@ -250,17 +252,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:gravity="center"
         android:orientation="vertical"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout15"
-        app:layout_constraintVertical_bias="0.0"
-        >
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:hint="@string/road_condition"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout11"
+            tools:layout_editor_absoluteX="30dp" />
 
         <androidx.appcompat.widget.AppCompatSpinner
             android:id="@+id/roadCondition"
@@ -268,28 +280,162 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:hint="@string/road_condition"
-            android:textColorHint="@color/grey"
-            android:prompt="@string/road_condition"
-            android:entries="@array/road_conditions"
             android:drawSelectorOnTop="true"
+            android:entries="@array/road_conditions"
+            android:hint="@string/road_condition"
+            android:prompt="@string/road_condition"
             android:spinnerMode="dialog"
-            android:layout_margin="4dp"
-            android:paddingHorizontal="20dp"
-            android:padding="10dp"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp" />
 
-            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/type_of_fungicide_pesticide"
+            android:textColorHint="@color/grey"
+            app:boxStrokeColor="#EBD8D8D8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout14"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:hint="@string/number_of_times_applied"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout11"
+            tools:layout_editor_absoluteX="30dp" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:drawSelectorOnTop="true"
+            android:entries="@array/number_of_times_applied"
+            android:hint="@string/number_of_times_applied"
+            android:prompt="@string/number_of_times_applied"
+            android:spinnerMode="dialog"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:hint="Type of fertilizer"
+            android:textColorHint="@color/grey"
+            app:boxStrokeColor="#EBD8D8D8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout14"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="@string/number_of_times_applied"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout11"
+            tools:layout_editor_absoluteX="30dp" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="2dp"
+            android:drawSelectorOnTop="true"
+            android:entries="@array/number_of_times_applied"
+            android:hint="@string/number_of_times_applied"
+            android:prompt="@string/number_of_times_applied"
+            android:spinnerMode="dialog"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/weeding_pollination"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout11"
+            tools:layout_editor_absoluteX="30dp" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="2dp"
+            android:drawSelectorOnTop="true"
+            android:entries="@array/number_of_times_applied"
+            android:hint="@string/number_of_times_applied"
+            android:prompt="@string/number_of_times_applied"
+            android:spinnerMode="dialog"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/buying_company"
+            android:textColorHint="@color/grey"
+            app:boxStrokeColor="#EBD8D8D8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout14"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/saveBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/textbody"
             android:text="@string/save"
-            android:layout_margin="14dp"
-
-            />
+            android:textColor="@color/white" />
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
