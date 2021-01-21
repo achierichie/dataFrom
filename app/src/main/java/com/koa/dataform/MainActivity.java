@@ -1,5 +1,6 @@
 package com.koa.dataform;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.AppCompatSpinner;
@@ -7,8 +8,12 @@ import androidx.fragment.app.DialogFragment;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.DocumentsContract;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -33,6 +38,7 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final int SAVE_FORM = 1;
     private Date date;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
         saveButton.setOnClickListener(v -> {
             //get the values from the form
-//            String name = ((TextInputLayout)findViewById(R.id.textInputLayout4)).getEditText().getText().toString().trim();
+            String date = ((TextInputLayout)findViewById(R.id.textInputLayout4)).getEditText().getText().toString().trim();
             String enumerator = ((TextInputLayout)findViewById(R.id.textInputLayout6)).getEditText().getText().toString().trim();
             String farmerName = ((TextInputLayout)findViewById(R.id.textInputLayout7)).getEditText().getText().toString().trim();
             String farmLocation = ((TextInputLayout)findViewById(R.id.textInputLayout8)).getEditText().getText().toString().trim();
@@ -87,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             String fileName = "Farm_Assessment_Form_" + sdf.format(new Date())+ ".csv";
             try {
                 ArrayList<String> values = new ArrayList<>();
-//                values.add(name);
+                values.add(date);
                 values.add(enumerator);
                 values.add(farmerName);
                 values.add(farmLocation);
@@ -105,12 +111,17 @@ public class MainActivity extends AppCompatActivity {
                 }
                 File dest = new File(Environment.getExternalStorageDirectory(), "farm_assessment/" + fileName);
                 dest.getParentFile().mkdirs();
-                FileWriter fileWriter = new FileWriter(dest);
-                PrintWriter printer = new PrintWriter(fileWriter);
                 String dataToSave = sb.toString().substring(0, sb.length()-1);
-                printer.println(dataToSave);
-                printer.flush();
-                printer.close();
+//                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+//                    createFile(Uri.fromFile(dest.getParentFile()), dest.getName());
+//                }
+//                else {
+                    FileWriter fileWriter = new FileWriter(dest);
+                    PrintWriter printer = new PrintWriter(fileWriter);
+                    printer.println(dataToSave);
+                    printer.flush();
+                    printer.close();
+//                }
                 Toast.makeText(this, R.string.save_successful, Toast.LENGTH_LONG).show();
                 System.out.println("Saved " + dest.getAbsolutePath());;
             } catch (IOException e) {
@@ -159,4 +170,26 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    private void createFile(Uri pickerInitialUri, String name) {
+        Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        intent.setType("application/pdf");
+        intent.putExtra(Intent.EXTRA_TITLE, name);
+
+        // Optionally, specify a URI for the directory that should be opened in
+        // the system file picker when your app creates the document.
+        intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, pickerInitialUri);
+
+        startActivityForResult(intent, SAVE_FORM);
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == SAVE_FORM) {
+
+        }
+    }
 }
