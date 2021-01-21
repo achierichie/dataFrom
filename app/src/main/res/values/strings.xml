@@ -16,14 +16,22 @@
     <string name="save">Save</string>
     <string name="form_error">There were errors in the input provided</string>
     <string name="save_successful">Data saved successfully</string>
+    <string name="type_of_fungicide_pesticide">Type of Fungicide/Pesticide</string>
+    <string name="number_of_times_applied">Number of times applied</string>
+    <string name="weeding_pollination">Weeding/Pollination</string>
+    <string name="buying_company">Buying Company</string>
+    <string name="date">Date</string>
 
 
     <string-array name="road_conditions">
         <item>Bad</item>
-        <item>Badder</item>
-        <item>Baddest</item>
+        <item>Moderate</item>
         <item>Good</item>
-        <item>Gooder</item>
-        <item>Goodest</item>
+    </string-array>
+
+    <string-array name="number_of_times_applied">
+        <item>Once/season</item>
+        <item>Twice/Season</item>
+        <item>More than Twice</item>
     </string-array>
 </resources>
