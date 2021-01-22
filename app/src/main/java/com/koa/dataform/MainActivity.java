@@ -10,21 +10,16 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.DocumentsContract;
-import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.android.material.textview.MaterialTextView;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -123,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                     printer.close();
 //                }
                 Toast.makeText(this, R.string.save_successful, Toast.LENGTH_LONG).show();
+                resetForm(this);
                 System.out.println("Saved " + dest.getAbsolutePath());;
             } catch (IOException e) {
                 e.printStackTrace();
@@ -130,6 +126,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private void resetForm(MainActivity mainActivity) {
+        ((TextInputLayout)findViewById(R.id.textInputLayout6)).getEditText().setText("");
+        ((TextInputLayout)findViewById(R.id.textInputLayout7)).getEditText().setText("");
+        ((TextInputLayout)findViewById(R.id.textInputLayout8)).getEditText().setText("");
+        ((TextInputLayout)findViewById(R.id.textInputLayout9)).getEditText().setText("");
+        ((TextInputLayout)findViewById(R.id.textInputLayout11)).getEditText().setText("");
+
+        ((AppCompatCheckBox)findViewById(R.id.hybrid)).setChecked(false);
+        ((AppCompatCheckBox)findViewById(R.id.appCompatCheckBox)).setChecked(false);
+
+        ((TextInputLayout)findViewById(R.id.textInputLayout14)).getEditText().setText("");
+        ((TextInputLayout)findViewById(R.id.textInputLayout15)).getEditText().setText("");
     }
 
     private static boolean isExternalStorageReadOnly() {
