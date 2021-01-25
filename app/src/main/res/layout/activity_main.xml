@@ -298,6 +298,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -331,6 +332,7 @@
             tools:layout_editor_absoluteX="30dp" />
 
         <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/fungicideTimes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -344,6 +346,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout17"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -377,6 +380,7 @@
             tools:layout_editor_absoluteX="30dp" />
 
         <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/fertilizerTimes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -402,6 +406,7 @@
             tools:layout_editor_absoluteX="30dp" />
 
         <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/pollinationTimes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -416,6 +421,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

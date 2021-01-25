@@ -74,6 +74,13 @@ public class MainActivity extends AppCompatActivity {
             String yieldPerSeason = ((TextInputLayout)findViewById(R.id.textInputLayout14)).getEditText().getText().toString().trim();
             String otherCrops = ((TextInputLayout)findViewById(R.id.textInputLayout15)).getEditText().getText().toString().trim();
             String roadCondition = ((AppCompatSpinner)findViewById(R.id.roadCondition)).getSelectedItem().toString().trim();
+            String typeOfFungucide = ((TextInputLayout)findViewById(R.id.textInputLayout16)).getEditText().getText().toString().trim();
+            String fungicideTimes = ((AppCompatSpinner)findViewById(R.id.fungicideTimes)).getSelectedItem().toString().trim();
+            String typeOfFertilizer = ((TextInputLayout)findViewById(R.id.textInputLayout17)).getEditText().getText().toString().trim();
+            String fertilizerTimes = ((AppCompatSpinner)findViewById(R.id.fertilizerTimes)).getSelectedItem().toString().trim();
+            String pollinationTimes = ((AppCompatSpinner)findViewById(R.id.pollinationTimes)).getSelectedItem().toString().trim();
+            String buyingCompany = ((TextInputLayout)findViewById(R.id.textInputLayout18)).getEditText().getText().toString().trim();
+
 
             boolean validInput = true;
             //todo validate the fields and throw and error if not valid
@@ -85,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             //todo ensure user has granted write permissions
 
             //save the form entries to a file
-            String fileName = "Farm_Assessment_Form_" + sdf.format(new Date())+ ".csv";
+            String fileName = farmerName + sdf.format(new Date())+ ".csv";
             try {
                 ArrayList<String> values = new ArrayList<>();
                 values.add(date);
@@ -99,6 +106,12 @@ public class MainActivity extends AppCompatActivity {
                 values.add(yieldPerSeason);
                 values.add(otherCrops);
                 values.add(roadCondition);
+                values.add(typeOfFungucide);
+                values.add(fungicideTimes);
+                values.add(typeOfFertilizer);
+                values.add(fertilizerTimes);
+                values.add(pollinationTimes);
+                values.add(buyingCompany);
                 StringBuilder sb = new StringBuilder();
 
                 for(String val : values) {
@@ -140,6 +153,13 @@ public class MainActivity extends AppCompatActivity {
 
         ((TextInputLayout)findViewById(R.id.textInputLayout14)).getEditText().setText("");
         ((TextInputLayout)findViewById(R.id.textInputLayout15)).getEditText().setText("");
+        ((TextInputLayout)findViewById(R.id.textInputLayout16)).getEditText().setText("");
+        ((AppCompatSpinner)findViewById(R.id.fungicideTimes)).getSelectedItem().toString();
+        ((TextInputLayout)findViewById(R.id.textInputLayout17)).getEditText().setText("");
+        ((AppCompatSpinner)findViewById(R.id.fertilizerTimes)).getSelectedItem().toString();
+        ((AppCompatSpinner)findViewById(R.id.pollinationTimes)).getSelectedItem().toString();
+        ((TextInputLayout)findViewById(R.id.textInputLayout18)).getEditText().setText("");
+
     }
 
     private static boolean isExternalStorageReadOnly() {
