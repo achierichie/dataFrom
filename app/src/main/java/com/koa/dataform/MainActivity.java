@@ -154,10 +154,10 @@ public class MainActivity extends AppCompatActivity {
         ((TextInputLayout)findViewById(R.id.textInputLayout14)).getEditText().setText("");
         ((TextInputLayout)findViewById(R.id.textInputLayout15)).getEditText().setText("");
         ((TextInputLayout)findViewById(R.id.textInputLayout16)).getEditText().setText("");
-        ((AppCompatSpinner)findViewById(R.id.fungicideTimes)).getSelectedItem().toString();
+        ((AppCompatSpinner)findViewById(R.id.fungicideTimes)).setSelection(0);
         ((TextInputLayout)findViewById(R.id.textInputLayout17)).getEditText().setText("");
-        ((AppCompatSpinner)findViewById(R.id.fertilizerTimes)).getSelectedItem().toString();
-        ((AppCompatSpinner)findViewById(R.id.pollinationTimes)).getSelectedItem().toString();
+        ((AppCompatSpinner)findViewById(R.id.fertilizerTimes)).setSelection(0);
+        ((AppCompatSpinner)findViewById(R.id.pollinationTimes)).setSelection(0);
         ((TextInputLayout)findViewById(R.id.textInputLayout18)).getEditText().setText("");
 
     }
