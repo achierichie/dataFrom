@@ -153,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
 
         ((TextInputLayout)findViewById(R.id.textInputLayout14)).getEditText().setText("");
         ((TextInputLayout)findViewById(R.id.textInputLayout15)).getEditText().setText("");
+        ((AppCompatSpinner)findViewById(R.id.roadCondition)).setSelection(0);
         ((TextInputLayout)findViewById(R.id.textInputLayout16)).getEditText().setText("");
         ((AppCompatSpinner)findViewById(R.id.fungicideTimes)).setSelection(0);
         ((TextInputLayout)findViewById(R.id.textInputLayout17)).getEditText().setText("");

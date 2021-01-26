@@ -36,7 +36,7 @@
         android:layout_marginRight="30dp"
         android:hint="@string/date"
         app:hintEnabled="true"
-        android:textColorHint="@color/grey"
+        android:textColorHint="@color/purple_700"
         app:boxStrokeColor="#EBD8D8D8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -44,11 +44,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="MissingConstraints">
 
-<!--        <com.google.android.material.textview.MaterialTextView-->
-<!--            android:id="@+id/dateField"-->
-<!--            android:inputType="none"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content" />-->
         <com.google.android.material.textfield.TextInputEditText
             android:inputType="none"
             android:id="@+id/dateField"
@@ -66,7 +61,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:hint="@string/enumerator"
-        android:textColorHint="@color/grey"
+        android:textColorHint="@color/purple_700"
         app:boxStrokeColor="#EBD8D8D8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +85,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:hint="@string/farmer_name"
-        android:textColorHint="@color/grey"
+        android:textColorHint="@color/purple_700"
         app:boxStrokeColor="#EBD8D8D8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,7 +108,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:hint="@string/farm_location"
-        android:textColorHint="@color/grey"
+        android:textColorHint="@color/purple_700"
         app:boxStrokeColor="#EBD8D8D8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -135,7 +130,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:hint="@string/farm_size_matured"
-        android:textColorHint="@color/grey"
+        android:textColorHint="@color/purple_700"
         app:boxStrokeColor="#EBD8D8D8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -157,7 +152,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:hint="@string/age_of_farm"
-        android:textColorHint="@color/grey"
+        android:textColorHint="@color/purple_700"
         app:boxStrokeColor="#EBD8D8D8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -180,7 +175,7 @@
         android:layout_marginLeft="30dp"
         android:hint="@string/crop_varieties"
         android:textColor="@color/grey"
-        android:textColorHint="@color/grey"
+        android:textColorHint="@color/purple_700"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout11"
         tools:layout_editor_absoluteX="30dp" />
@@ -221,7 +216,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:hint="@string/yield_per_season"
-        android:textColorHint="@color/grey"
+        android:textColorHint="@color/purple_700"
         app:boxStrokeColor="#EBD8D8D8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -243,7 +238,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:hint="@string/other_crops_oilpalm"
-        android:textColorHint="@color/grey"
+        android:textColorHint="@color/purple_700"
         app:boxStrokeColor="#EBD8D8D8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -278,7 +273,7 @@
             android:layout_marginLeft="0dp"
             android:hint="@string/road_condition"
             android:textColor="@color/grey"
-            android:textColorHint="@color/grey"
+            android:textColorHint="@color/purple_700"
             android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout11"
             tools:layout_editor_absoluteX="30dp" />
@@ -294,7 +289,7 @@
             android:hint="@string/road_condition"
             android:prompt="@string/road_condition"
             android:spinnerMode="dialog"
-            android:textColorHint="@color/grey"
+            android:textColorHint="@color/purple_700"
             android:textSize="18sp" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -304,7 +299,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:hint="@string/type_of_fungicide_pesticide"
-            android:textColorHint="@color/grey"
+            android:textColorHint="@color/purple_700"
             app:boxStrokeColor="#EBD8D8D8"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -326,7 +321,7 @@
             android:layout_marginLeft="0dp"
             android:hint="@string/number_of_times_applied"
             android:textColor="@color/grey"
-            android:textColorHint="@color/grey"
+            android:textColorHint="@color/purple_700"
             android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout11"
             tools:layout_editor_absoluteX="30dp" />
@@ -352,7 +347,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:hint="Type of fertilizer"
-            android:textColorHint="@color/grey"
+            android:textColorHint="@color/purple_700"
             app:boxStrokeColor="#EBD8D8D8"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -374,7 +369,7 @@
             android:layout_marginTop="5dp"
             android:hint="@string/number_of_times_applied"
             android:textColor="@color/grey"
-            android:textColorHint="@color/grey"
+            android:textColorHint="@color/purple_700"
             android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout11"
             tools:layout_editor_absoluteX="30dp" />
@@ -391,7 +386,7 @@
             android:hint="@string/number_of_times_applied"
             android:prompt="@string/number_of_times_applied"
             android:spinnerMode="dialog"
-            android:textColorHint="@color/grey"
+            android:textColorHint="@color/purple_700"
             android:textSize="18sp" />
 
         <TextView
@@ -400,7 +395,7 @@
             android:layout_marginTop="8dp"
             android:hint="@string/weeding_pollination"
             android:textColor="@color/grey"
-            android:textColorHint="@color/grey"
+            android:textColorHint="@color/purple_700"
             android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout11"
             tools:layout_editor_absoluteX="30dp" />
@@ -417,7 +412,7 @@
             android:hint="@string/number_of_times_applied"
             android:prompt="@string/number_of_times_applied"
             android:spinnerMode="dialog"
-            android:textColorHint="@color/grey"
+            android:textColorHint="@color/purple_700"
             android:textSize="18sp" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -427,7 +422,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:hint="@string/buying_company"
-            android:textColorHint="@color/grey"
+            android:textColorHint="@color/purple_700"
             app:boxStrokeColor="#EBD8D8D8"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
