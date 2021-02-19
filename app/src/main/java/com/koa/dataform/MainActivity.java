@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         //    AutoCompleteTextView act_season;
         //    ArrayList<String> arrayList_dropdown;
         //    ArrayAdapter<String> arrayAdapter_dropdown;
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_hhmm", Locale.ENGLISH);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_hh:mm:ss", Locale.ENGLISH);
         Button saveButton = findViewById(R.id.saveBtn);
         TextInputEditText dateInput = findViewById(R.id.dateField);
         SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
