@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
             String yieldPerSeason = ((TextInputLayout)findViewById(R.id.textInputLayout14)).getEditText().getText().toString().trim();
             String otherCrops = ((TextInputLayout)findViewById(R.id.textInputLayout15)).getEditText().getText().toString().trim();
+            String comment = ((TextInputLayout)findViewById(R.id.textInputLayout19)).getEditText().getText().toString().trim();
             String roadCondition = ((AppCompatSpinner)findViewById(R.id.roadCondition)).getSelectedItem().toString().trim();
             String typeOfFungucide = ((TextInputLayout)findViewById(R.id.textInputLayout16)).getEditText().getText().toString().trim();
             String fungicideTimes = ((AppCompatSpinner)findViewById(R.id.fungicideTimes)).getSelectedItem().toString().trim();
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
             String fertilizerTimes = ((AppCompatSpinner)findViewById(R.id.fertilizerTimes)).getSelectedItem().toString().trim();
             String pollinationTimes = ((AppCompatSpinner)findViewById(R.id.pollinationTimes)).getSelectedItem().toString().trim();
             String buyingCompany = ((TextInputLayout)findViewById(R.id.textInputLayout18)).getEditText().getText().toString().trim();
+            String endingTime = ((TextInputLayout)findViewById(R.id.textInputLayout20)).getEditText().getText().toString().trim();
 
 
             boolean validInput = true;
@@ -106,12 +108,14 @@ public class MainActivity extends AppCompatActivity {
                 values.add(yieldPerSeason);
                 values.add(otherCrops);
                 values.add(roadCondition);
+                values.add(comment);
                 values.add(typeOfFungucide);
                 values.add(fungicideTimes);
                 values.add(typeOfFertilizer);
                 values.add(fertilizerTimes);
                 values.add(pollinationTimes);
                 values.add(buyingCompany);
+                values.add(endingTime);
                 StringBuilder sb = new StringBuilder();
 
                 for(String val : values) {
@@ -154,12 +158,14 @@ public class MainActivity extends AppCompatActivity {
         ((TextInputLayout)findViewById(R.id.textInputLayout14)).getEditText().setText("");
         ((TextInputLayout)findViewById(R.id.textInputLayout15)).getEditText().setText("");
         ((AppCompatSpinner)findViewById(R.id.roadCondition)).setSelection(0);
+        ((TextInputLayout)findViewById(R.id.textInputLayout19)).getEditText().setText("");
         ((TextInputLayout)findViewById(R.id.textInputLayout16)).getEditText().setText("");
         ((AppCompatSpinner)findViewById(R.id.fungicideTimes)).setSelection(0);
         ((TextInputLayout)findViewById(R.id.textInputLayout17)).getEditText().setText("");
         ((AppCompatSpinner)findViewById(R.id.fertilizerTimes)).setSelection(0);
         ((AppCompatSpinner)findViewById(R.id.pollinationTimes)).setSelection(0);
         ((TextInputLayout)findViewById(R.id.textInputLayout18)).getEditText().setText("");
+        ((TextInputLayout)findViewById(R.id.textInputLayout20)).getEditText().setText("");
 
     }
 

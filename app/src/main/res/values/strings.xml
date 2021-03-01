@@ -21,6 +21,9 @@
     <string name="weeding_pollination">Weeding/Pollination</string>
     <string name="buying_company">Buying Company</string>
     <string name="date">Date</string>
+    <string name="comments">comments</string>
+    <string name="road_condition_comments">Road condition comments</string>
+    <string name="ending_time_of_coordinate">Ending time of coordinate</string>
 
 
     <string-array name="road_conditions">
